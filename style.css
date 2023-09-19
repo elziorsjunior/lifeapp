@@ -8,7 +8,8 @@ body {
     margin: 0;
 }
 
-.login-container {
+.login-container,
+.clock-container {
     text-align: center;
     background-color: #fff;
     padding: 20px;
@@ -63,3 +64,10 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+#clock {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
