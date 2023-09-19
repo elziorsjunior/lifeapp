@@ -5,7 +5,7 @@
     --containerDark: #010101;
     --textColor: #f4f4f4;
     --labelColor: #cccccc;
-    --shadow: #030303;
+    
 }
 
 *,
@@ -30,7 +30,7 @@ body {
     align-items: center;
     font-size: 1.4rem;
     font-weight: inherit;
-     background: linear-gradient(
+	background: linear-gradient(
     -45deg, black,
     #0061ff, #5c03bc, black, #e536ab,
     #e81cff, #f89b29, #0e0725,
@@ -53,6 +53,40 @@ body {
     }
 }
 
+.shadow{
+ position: relative;
+ width: 400px;
+ height: 250px;
+ background: linear-gradient(0deg,#000,#262626);
+}
+
+.shadow::before,
+.shadow::after{
+ content: '';
+ position: absolute;
+ inset: -2px;
+ background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+ background-size: 400%;
+ z-index: -1;
+ animation: animate 60s linear infinite;
+}
+
+.shadow::after{
+ filter: blur(15px);
+}
+
+@keyframes animate {
+ 0%{
+  background-position: 0 0;
+ }
+ 50%{
+  background-position: 400% 0;
+ }
+ 100%{
+  background-position: 0 0;
+ }
+}
+
 .container {
     position: relative;
     display: flex;
@@ -63,7 +97,6 @@ body {
     width: 60rem;
     background-color: var(--containerDark);
     border-radius: 3px;
-    box-shadow: 2px 2px 20px var(--shadow);
 }
 
 .clock-column {
