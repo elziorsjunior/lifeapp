@@ -70,4 +70,27 @@ button:hover {
     font-weight: bold;
     margin-top: 10px;
 }
-
+body {
+    font-family: "Work Sans", sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.time {
+    background: #222;
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+    width: 300px;
+}
+.hms {
+    font-size: 48pt;
+    font-weight: 200;
+}
+.ampm {
+    font-size: 12pt;
+}
+.date {
+    font-size: 10pt;
+}
