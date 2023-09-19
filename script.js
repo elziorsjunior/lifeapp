@@ -1,12 +1,3 @@
-document.getElementById('login-button').addEventListener('click', function() {
-    const password = document.getElementById('password').value;
-    if (password === '0000') {
-        window.location.href = 'home.html'; // Redireciona para a página home após o login bem-sucedido
-    } else {
-        alert('Senha incorreta. Tente novamente.');
-    }
-});
-
 function updateTime() {
   var dateInfo = new Date();
 
@@ -34,37 +25,3 @@ function updateTime() {
   /* date */
   var dow = [
       "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    month = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
-    ],
-    day = dateInfo.getDate();
-
-  // store date
-  var currentDate = dow[dateInfo.getDay()] + ", " + month[dateInfo.getMonth()] + " " + day;
-
-  document.getElementsByClassName("date")[0].innerHTML = currentDate;
-};
-
-// print time and date once, then update them every second
-updateTime();
-setInterval(function() {
-  updateTime()
-}, 1000);
