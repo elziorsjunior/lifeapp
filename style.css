@@ -110,7 +110,7 @@ ul.task-list li .delete-task-btn {
 }
 
 .add-task-btn:hover, .add-project-btn:hover {
-    background-color: #45a049;
+    background-color: #21007c;
 }
 
 input[type="text"] {
