@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasks</title>
-    <link rel="stylesheet" href="style.css">
+    <title>LIFE App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Tasks</h1>
-        <!-- Navegação por abas -->
-        <div class="tabs">
-            <button class="tab-btn active" data-tab="projects-tab">TASKS</button>
-            <button class="tab-btn" data-tab="tasks-tab">PROJECTS</button>
-        </div>
-
-        <!-- Conteúdo das abas -->
-        <div id="projects-tab" class="tab-content active">
-            <div id="projects"></div>
-          
-            
-        </div>
-
-        <div id="tasks-tab" class="tab-content">
-            <h2>NOVO PROJETO</h2>
-            <input type="text" id="new-project-input" placeholder="Enter project title...">
-            <button class="add-project-btn" id="add-project">Add Project</button>
-            <div id="projects"></div>
-        </div>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="/media/bg01.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
+    
+    <div class="content">
+        <button id="menu-toggle" class="menu-button">☰</button>
+        <nav id="menu" class="hidden">
+            <ul>
+                <a href="/tasks/index.html" class="menu-link"><img src="/media/tasks-card.png" alt="Tasks"></a>
+                <a href="/timeline/index.html" class="menu-link"><img src="/media/timeline-card.png" alt="Timeline"></a>
+                <a href="/widgets/index.html" class="menu-link"><img src="/media/widgets-card.png" alt="Widgets"></a>
+            </ul>
+        </nav>
+        <h1>LIFE</h1>
+        
+        
+    </div>
+
+    <footer class="footer">
+        <p>LIFE.APP VERSION 0.1</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
