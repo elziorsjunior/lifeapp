@@ -97,10 +97,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function createTaskElement(text, completed = false) {
         const taskItem = document.createElement('li');
 
+        const checkboxWrapper = document.createElement('div');
+        checkboxWrapper.className = 'round';
+
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.checked = completed;
         checkbox.addEventListener('change', saveProjects);
+
+        const checkboxLabel = document.createElement('label');
+
+        checkboxWrapper.appendChild(checkbox);
+        checkboxWrapper.appendChild(checkboxLabel);
 
         const taskText = document.createElement('span');
         taskText.textContent = text;
@@ -115,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
             saveProjects();
         });
 
-        taskItem.appendChild(checkbox);
+        taskItem.appendChild(checkboxWrapper);
         taskItem.appendChild(taskText);
         taskItem.appendChild(deleteTaskButton);
 
