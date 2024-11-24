@@ -2,34 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
-    <title>Clock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks List</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-       <div class="container">
-
-        <div class="clock-column">
-            <p class="clock-day clock-timer"></p>
-            <p class="clock-label">Day</p>
+    <div class="container">
+        <h1>Tasks</h1>
+        <div id="projects-container">
+            <!-- Os projetos serão adicionados dinamicamente -->
         </div>
-
-        <div class="clock-column">
-            <p class="clock-hours clock-timer"></p>
-            <p class="clock-label">Hours</p>
-        </div>
-        
-        <div class="clock-column">
-            <p class="clock-minutes clock-timer"></p>
-            <p class="clock-label">Minutes</p>
-        </div>
-
-        <div class="clock-column">
-            <p class="clock-seconds clock-timer"></p>
-            <p class="clock-label">Seconds</p>
+        <div class="controls">
+            <button class="add-project-btn">Add Project</button>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
