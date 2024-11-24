@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Geral */
 body {
     font-family: Arial, sans-serif;
@@ -122,3 +123,110 @@ input[type="text"] {
     background-color: #1e1e1e;
     color: white;
 }
+=======
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Estilo das abas */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.tab-btn.active {
+    background-color: #4caf50;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Projetos e tarefas */
+.project, .task {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+}
+
+.project h2 {
+    margin: 0 0 10px 0;
+    cursor: pointer;
+}
+
+ul.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+}
+
+ul.task-list li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.add-task-btn, .add-project-btn {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-task-btn:hover, .add-project-btn:hover {
+    background-color: #45a049;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: white;
+}
+>>>>>>> 7091703ef20cc32916d1d735c5b36a5396b08562
