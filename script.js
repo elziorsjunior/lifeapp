@@ -97,18 +97,17 @@ document.addEventListener('DOMContentLoaded', () => {
     function createTaskElement(text, completed = false) {
         const taskItem = document.createElement('li');
 
-        const checkboxWrapper = document.createElement('div');
-        checkboxWrapper.className = 'round';
+        const checkboxContainer = document.createElement('div');
+        checkboxContainer.className = 'round';
 
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.checked = completed;
         checkbox.addEventListener('change', saveProjects);
 
-        const checkboxLabel = document.createElement('label');
-
-        checkboxWrapper.appendChild(checkbox);
-        checkboxWrapper.appendChild(checkboxLabel);
+        const label = document.createElement('label');
+        checkboxContainer.appendChild(checkbox);
+        checkboxContainer.appendChild(label);
 
         const taskText = document.createElement('span');
         taskText.textContent = text;
@@ -123,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
             saveProjects();
         });
 
-        taskItem.appendChild(checkboxWrapper);
+        taskItem.appendChild(checkboxContainer);
         taskItem.appendChild(taskText);
         taskItem.appendChild(deleteTaskButton);
 
@@ -143,5 +142,3 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!localStorage.getItem('projects')) {
         addProjectToDOM('Example Project', [{ text: 'Example Task', completed: false }]);
     }
-    loadProjects();
-});
